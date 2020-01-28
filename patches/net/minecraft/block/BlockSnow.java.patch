@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockSnow.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockSnow.java
-@@ -23,6 +23,8 @@
+@@ -22,7 +22,11 @@
+ import net.minecraft.world.EnumSkyBlock;
  import net.minecraft.world.IBlockAccess;
  import net.minecraft.world.World;
++import carpet.helpers.StatHelper;
  
++
 +import carpet.helpers.StatHelper;
 +
  public class BlockSnow extends Block
  {
      public static final PropertyInteger field_176315_a = PropertyInteger.func_177719_a("layers", 1, 8);
-@@ -114,7 +116,10 @@
+@@ -114,7 +118,10 @@
      {
          func_180635_a(p_180657_1_, p_180657_3_, new ItemStack(Items.field_151126_ay, ((Integer)p_180657_4_.func_177229_b(field_176315_a)).intValue() + 1, 0));
          p_180657_1_.func_175698_g(p_180657_3_);

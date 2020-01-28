@@ -1,0 +1,42 @@
+--- ../src-base/minecraft/net/minecraft/world/gen/feature/WorldGenMegaPineTree.java
++++ ../src-work/minecraft/net/minecraft/world/gen/feature/WorldGenMegaPineTree.java
+@@ -1,6 +1,7 @@
+ package net.minecraft.world.gen.feature;
+ 
+ import java.util.Random;
++import carpet.CarpetSettings;
+ import net.minecraft.block.Block;
+ import net.minecraft.block.BlockDirt;
+ import net.minecraft.block.BlockLeaves;
+@@ -14,6 +15,21 @@
+ import net.minecraft.util.math.MathHelper;
+ import net.minecraft.world.World;
+ 
++
++import carpet.CarpetSettings;
++import net.minecraft.block.Block;
++import net.minecraft.block.BlockDirt;
++import net.minecraft.block.BlockLeaves;
++import net.minecraft.block.BlockOldLeaf;
++import net.minecraft.block.BlockOldLog;
++import net.minecraft.block.BlockPlanks;
++import net.minecraft.block.material.Material;
++import net.minecraft.block.state.IBlockState;
++import net.minecraft.init.Blocks;
++import net.minecraft.util.math.BlockPos;
++import net.minecraft.util.math.MathHelper;
++import net.minecraft.world.World;
++
+ public class WorldGenMegaPineTree extends WorldGenHugeTrees
+ {
+     private static final IBlockState field_181633_e = Blocks.field_150364_r.func_176223_P().func_177226_a(BlockOldLog.field_176301_b, BlockPlanks.EnumType.SPRUCE);
+@@ -73,6 +89,9 @@
+                 }
+             }
+ 
++            if (CarpetSettings.treeGiantSpruceGeneratesPodzol) {
++               this.func_180711_a(p_180709_1_, p_180709_2_, p_180709_3_);
++            }
+             return true;
+         }
+     }

@@ -1,10 +1,16 @@
 --- ../src-base/minecraft/net/minecraft/tileentity/TileEntityStructure.java
 +++ ../src-work/minecraft/net/minecraft/tileentity/TileEntityStructure.java
-@@ -31,7 +31,13 @@
+@@ -30,8 +30,19 @@
+ import net.minecraft.world.gen.structure.template.PlacementSettings;
  import net.minecraft.world.gen.structure.template.Template;
  import net.minecraft.world.gen.structure.template.TemplateManager;
++import carpet.CarpetSettings;
++import carpet.carpetclient.CarpetClientServer;
++import carpet.helpers.IPlayerSensitiveTileEntity;
++import net.minecraft.entity.player.EntityPlayerMP;
  
 -public class TileEntityStructure extends TileEntity
++
 +import carpet.CarpetSettings;
 +import carpet.carpetclient.CarpetClientServer;
 +import carpet.helpers.IPlayerSensitiveTileEntity;
@@ -15,7 +21,7 @@
  {
      private String field_184420_a = "";
      private String field_184421_f = "";
-@@ -78,13 +84,14 @@
+@@ -78,13 +89,14 @@
          this.func_184404_a(p_145839_1_.func_74779_i("name"));
          this.field_184421_f = p_145839_1_.func_74779_i("author");
          this.field_184422_g = p_145839_1_.func_74779_i("metadata");
@@ -36,7 +42,7 @@
          this.field_184424_i = new BlockPos(l, i1, j1);
  
          try
-@@ -151,6 +158,20 @@
+@@ -151,6 +163,20 @@
      {
          return new SPacketUpdateTileEntity(this.field_174879_c, 7, this.func_189517_E_());
      }

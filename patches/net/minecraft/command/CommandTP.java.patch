@@ -1,9 +1,14 @@
 --- ../src-base/minecraft/net/minecraft/command/CommandTP.java
 +++ ../src-work/minecraft/net/minecraft/command/CommandTP.java
-@@ -13,6 +13,10 @@
+@@ -12,7 +12,15 @@
+ import net.minecraft.server.MinecraftServer;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.util.math.MathHelper;
++import carpet.CarpetSettings;
++import carpet.utils.Waypoint;
++import net.minecraft.world.WorldServer;
  
++
 +import net.minecraft.world.WorldServer;
 +import carpet.CarpetSettings;
 +import carpet.utils.Waypoint;
@@ -11,7 +16,7 @@
  public class CommandTP extends CommandBase
  {
      public String func_71517_b()
-@@ -38,6 +42,17 @@
+@@ -38,6 +46,17 @@
          }
          else
          {

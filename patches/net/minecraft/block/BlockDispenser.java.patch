@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockDispenser.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockDispenser.java
-@@ -32,6 +32,8 @@
+@@ -31,7 +31,11 @@
+ import net.minecraft.util.math.BlockPos;
  import net.minecraft.util.registry.RegistryDefaulted;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class BlockDispenser extends BlockContainer
  {
      public static final PropertyDirection field_176441_a = BlockDirectional.field_176387_N;
-@@ -54,6 +56,8 @@
+@@ -54,6 +58,8 @@
      public void func_176213_c(World p_176213_1_, BlockPos p_176213_2_, IBlockState p_176213_3_)
      {
          super.func_176213_c(p_176213_1_, p_176213_2_, p_176213_3_);
@@ -18,7 +21,7 @@
          this.func_176438_e(p_176213_1_, p_176213_2_, p_176213_3_);
      }
  
-@@ -153,7 +157,17 @@
+@@ -153,7 +159,17 @@
  
      public void func_189540_a(IBlockState p_189540_1_, World p_189540_2_, BlockPos p_189540_3_, Block p_189540_4_, BlockPos p_189540_5_)
      {
@@ -37,7 +40,7 @@
          boolean flag1 = ((Boolean)p_189540_1_.func_177229_b(field_176440_b)).booleanValue();
  
          if (flag && !flag1)
-@@ -187,7 +201,8 @@
+@@ -187,7 +203,8 @@
  
      public void func_180633_a(World p_180633_1_, BlockPos p_180633_2_, IBlockState p_180633_3_, EntityLivingBase p_180633_4_, ItemStack p_180633_5_)
      {

@@ -18,18 +18,21 @@
  import net.minecraft.util.EnumFacing;
  import net.minecraft.util.EnumHand;
  import net.minecraft.util.math.BlockPos;
-@@ -17,7 +21,9 @@
+@@ -16,8 +20,12 @@
+ import net.minecraft.util.text.TextComponentTranslation;
  import net.minecraft.world.IInteractionObject;
  import net.minecraft.world.World;
++import javax.annotation.Nullable;
  
 -public class BlockWorkbench extends Block
++
 +import javax.annotation.Nullable;
 +
 +public class BlockWorkbench extends BlockContainer
  {
      protected BlockWorkbench()
      {
-@@ -33,7 +39,15 @@
+@@ -33,7 +41,15 @@
          }
          else
          {
@@ -46,7 +49,7 @@
              p_180639_4_.func_71029_a(StatList.field_188062_ab);
              return true;
          }
-@@ -75,4 +89,50 @@
+@@ -75,4 +91,50 @@
                  return "minecraft:crafting_table";
              }
          }

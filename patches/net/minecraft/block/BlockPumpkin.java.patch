@@ -1,9 +1,12 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockPumpkin.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockPumpkin.java
-@@ -26,6 +26,10 @@
+@@ -25,7 +25,13 @@
+ import net.minecraft.util.Rotation;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
 + import carpet.CarpetSettings;
@@ -11,7 +14,7 @@
  public class BlockPumpkin extends BlockHorizontal
  {
      private BlockPattern field_176394_a;
-@@ -136,7 +140,7 @@
+@@ -136,7 +142,7 @@
  
      public boolean func_176196_c(World p_176196_1_, BlockPos p_176196_2_)
      {

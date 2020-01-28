@@ -1,15 +1,20 @@
 --- ../src-base/minecraft/net/minecraft/util/Util.java
 +++ ../src-work/minecraft/net/minecraft/util/Util.java
-@@ -4,6 +4,8 @@
+@@ -4,8 +4,13 @@
  import java.util.concurrent.ExecutionException;
  import java.util.concurrent.FutureTask;
  import javax.annotation.Nullable;
-+
 +import carpet.CarpetSettings;
  import org.apache.logging.log4j.Logger;
  
++
++import carpet.CarpetSettings;
++import org.apache.logging.log4j.Logger;
++
  public class Util
-@@ -18,7 +20,9 @@
+ {
+     @Nullable
+@@ -18,7 +23,9 @@
          }
          catch (ExecutionException executionexception)
          {

@@ -1,9 +1,15 @@
 --- ../src-base/minecraft/net/minecraft/world/gen/ChunkGeneratorEnd.java
 +++ ../src-work/minecraft/net/minecraft/world/gen/ChunkGeneratorEnd.java
-@@ -22,6 +22,11 @@
+@@ -21,7 +21,17 @@
+ import net.minecraft.world.gen.feature.WorldGenEndGateway;
  import net.minecraft.world.gen.feature.WorldGenEndIsland;
  import net.minecraft.world.gen.structure.MapGenEndCity;
++import carpet.CarpetSettings;
++import carpet.carpetclient.CarpetClientMarkers;
++import net.minecraft.entity.Entity;
++import net.minecraft.nbt.NBTTagList;
  
++
 +import carpet.carpetclient.CarpetClientMarkers;
 +import net.minecraft.entity.Entity;
 +import net.minecraft.nbt.NBTTagList;
@@ -12,7 +18,7 @@
  public class ChunkGeneratorEnd implements IChunkGenerator
  {
      private final Random field_73220_k;
-@@ -404,6 +409,13 @@
+@@ -404,6 +414,13 @@
  
      public List<Biome.SpawnListEntry> func_177458_a(EnumCreatureType p_177458_1_, BlockPos p_177458_2_)
      {
@@ -26,7 +32,7 @@
          return this.field_73230_p.func_180494_b(p_177458_2_).func_76747_a(p_177458_1_);
      }
  
-@@ -420,5 +432,14 @@
+@@ -420,5 +437,14 @@
  
      public void func_180514_a(Chunk p_180514_1_, int p_180514_2_, int p_180514_3_)
      {

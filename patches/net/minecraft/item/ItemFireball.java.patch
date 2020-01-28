@@ -1,9 +1,15 @@
 --- ../src-base/minecraft/net/minecraft/item/ItemFireball.java
 +++ ../src-work/minecraft/net/minecraft/item/ItemFireball.java
-@@ -12,6 +12,11 @@
+@@ -11,7 +11,17 @@
+ import net.minecraft.util.SoundCategory;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
++import carpet.helpers.GhastHelper;
++import net.minecraft.entity.monster.EntityGhast;
++import net.minecraft.util.ActionResult;
  
++
 +import carpet.CarpetSettings;
 +import carpet.helpers.GhastHelper;
 +import net.minecraft.entity.monster.EntityGhast;
@@ -12,7 +18,7 @@
  public class ItemFireball extends Item
  {
      public ItemFireball()
-@@ -51,4 +56,22 @@
+@@ -51,4 +61,22 @@
              }
          }
      }

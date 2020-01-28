@@ -1,15 +1,41 @@
 --- ../src-base/minecraft/net/minecraft/tileentity/TileEntity.java
 +++ ../src-work/minecraft/net/minecraft/tileentity/TileEntity.java
-@@ -1,6 +1,8 @@
+@@ -1,6 +1,7 @@
  package net.minecraft.tileentity;
  
  import javax.annotation.Nullable;
-+
 +import carpet.helpers.TileEntityCraftingTable;
  import net.minecraft.block.Block;
  import net.minecraft.block.BlockJukebox;
  import net.minecraft.block.state.IBlockState;
-@@ -29,6 +31,9 @@
+@@ -19,6 +20,26 @@
+ import org.apache.logging.log4j.LogManager;
+ import org.apache.logging.log4j.Logger;
+ 
++
++import carpet.helpers.TileEntityCraftingTable;
++import net.minecraft.block.Block;
++import net.minecraft.block.BlockJukebox;
++import net.minecraft.block.state.IBlockState;
++import net.minecraft.crash.CrashReportCategory;
++import net.minecraft.crash.ICrashReportDetail;
++import net.minecraft.init.Blocks;
++import net.minecraft.nbt.NBTTagCompound;
++import net.minecraft.network.play.server.SPacketUpdateTileEntity;
++import net.minecraft.util.Mirror;
++import net.minecraft.util.ResourceLocation;
++import net.minecraft.util.Rotation;
++import net.minecraft.util.math.BlockPos;
++import net.minecraft.util.registry.RegistryNamespaced;
++import net.minecraft.util.text.ITextComponent;
++import net.minecraft.world.World;
++import org.apache.logging.log4j.LogManager;
++import org.apache.logging.log4j.Logger;
++
+ public abstract class TileEntity
+ {
+     private static final Logger field_145852_a = LogManager.getLogger();
+@@ -29,6 +50,9 @@
      private int field_145847_g = -1;
      protected Block field_145854_h;
  
@@ -19,7 +45,7 @@
      private static void func_190560_a(String p_190560_0_, Class <? extends TileEntity > p_190560_1_)
      {
          field_190562_f.func_82595_a(new ResourceLocation(p_190560_0_), p_190560_1_);
-@@ -307,5 +312,6 @@
+@@ -307,5 +331,6 @@
          func_190560_a("command_block", TileEntityCommandBlock.class);
          func_190560_a("shulker_box", TileEntityShulkerBox.class);
          func_190560_a("bed", TileEntityBed.class);

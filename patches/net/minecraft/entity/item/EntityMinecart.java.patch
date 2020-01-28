@@ -1,9 +1,12 @@
 --- ../src-base/minecraft/net/minecraft/entity/item/EntityMinecart.java
 +++ ../src-work/minecraft/net/minecraft/entity/item/EntityMinecart.java
-@@ -34,6 +34,10 @@
+@@ -33,7 +33,13 @@
+ import net.minecraft.world.IWorldNameable;
  import net.minecraft.world.World;
  import net.minecraft.world.WorldServer;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
 + import carpet.CarpetSettings;
@@ -11,7 +14,7 @@
  public abstract class EntityMinecart extends Entity implements IWorldNameable
  {
      private static final DataParameter<Integer> field_184265_a = EntityDataManager.<Integer>func_187226_a(EntityMinecart.class, DataSerializers.field_187192_b);
-@@ -51,6 +55,9 @@
+@@ -51,6 +57,9 @@
      private double field_70512_ao;
      private double field_70513_ap;
  
@@ -21,7 +24,7 @@
      public EntityMinecart(World p_i1712_1_)
      {
          super(p_i1712_1_);
-@@ -474,7 +481,10 @@
+@@ -474,7 +483,10 @@
          this.field_70179_y = d5 * d2 / d3;
          Entity entity = this.func_184188_bt().isEmpty() ? null : (Entity)this.func_184188_bt().get(0);
  

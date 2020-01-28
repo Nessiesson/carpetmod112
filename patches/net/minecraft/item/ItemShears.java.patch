@@ -1,9 +1,12 @@
 --- ../src-base/minecraft/net/minecraft/item/ItemShears.java
 +++ ../src-work/minecraft/net/minecraft/item/ItemShears.java
-@@ -9,6 +9,10 @@
+@@ -8,7 +8,13 @@
+ import net.minecraft.init.Blocks;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
 + import carpet.CarpetSettings;
@@ -11,7 +14,7 @@
  public class ItemShears extends Item
  {
      public ItemShears()
-@@ -38,8 +42,11 @@
+@@ -38,8 +44,11 @@
      public float func_150893_a(ItemStack p_150893_1_, IBlockState p_150893_2_)
      {
          Block block = p_150893_2_.func_177230_c();

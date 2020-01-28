@@ -1,9 +1,14 @@
 --- ../src-base/minecraft/net/minecraft/world/gen/structure/MapGenScatteredFeature.java
 +++ ../src-work/minecraft/net/minecraft/world/gen/structure/MapGenScatteredFeature.java
-@@ -13,19 +13,27 @@
+@@ -12,20 +12,32 @@
+ import net.minecraft.util.math.MathHelper;
  import net.minecraft.world.World;
  import net.minecraft.world.biome.Biome;
++import java.util.ArrayList;
++import net.minecraft.entity.monster.EntityHusk;
++import net.minecraft.world.biome.Biome.SpawnListEntry;
  
++
 +import java.util.ArrayList;
 +import net.minecraft.entity.monster.EntityHusk;
 +import net.minecraft.world.biome.Biome.SpawnListEntry;
@@ -28,7 +33,7 @@
      }
  
      public MapGenScatteredFeature(Map<String, String> p_i2061_1_)
-@@ -121,6 +129,11 @@
+@@ -121,6 +133,11 @@
          return this.field_82668_f;
      }
  
@@ -40,7 +45,7 @@
      public static class Start extends StructureStart
          {
              public Start()
-@@ -166,4 +179,19 @@
+@@ -166,4 +183,19 @@
                  this.func_75072_c();
              }
          }

@@ -1,9 +1,12 @@
 --- ../src-base/minecraft/net/minecraft/world/gen/structure/template/Template.java
 +++ ../src-work/minecraft/net/minecraft/world/gen/structure/template/Template.java
-@@ -36,6 +36,10 @@
+@@ -35,7 +35,13 @@
+ import net.minecraft.util.math.Vec3d;
  import net.minecraft.world.World;
  import net.minecraft.world.gen.structure.StructureBoundingBox;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
 + import carpet.CarpetSettings;
@@ -11,7 +14,7 @@
  public class Template
  {
      private final List<Template.BlockInfo> field_186270_a = Lists.<Template.BlockInfo>newArrayList();
-@@ -233,11 +237,11 @@
+@@ -233,11 +239,11 @@
                                      ((IInventory)tileentity).func_174888_l();
                                  }
  
@@ -25,7 +28,7 @@
                          {
                              TileEntity tileentity2 = p_189960_1_.func_175625_s(blockpos);
  
-@@ -263,8 +267,13 @@
+@@ -263,8 +269,13 @@
  
                      if (structureboundingbox == null || structureboundingbox.func_175898_b(blockpos1))
                      {
@@ -40,7 +43,7 @@
                          if (template$blockinfo2.field_186244_c != null)
                          {
                              TileEntity tileentity1 = p_189960_1_.func_175625_s(blockpos1);
-@@ -287,6 +296,20 @@
+@@ -287,6 +298,20 @@
  
      private void func_186263_a(World p_186263_1_, BlockPos p_186263_2_, Mirror p_186263_3_, Rotation p_186263_4_, @Nullable StructureBoundingBox p_186263_5_)
      {
@@ -61,7 +64,7 @@
          for (Template.EntityInfo template$entityinfo : this.field_186271_b)
          {
              BlockPos blockpos = func_186268_a(template$entityinfo.field_186248_b, p_186263_3_, p_186263_4_).func_177971_a(p_186263_2_);
-@@ -435,11 +458,11 @@
+@@ -435,11 +460,11 @@
      {
          p_191158_0_.func_188258_a(FixTypes.STRUCTURE, new IDataWalker()
          {
@@ -76,7 +79,7 @@
  
                      for (int i = 0; i < nbttaglist.func_74745_c(); ++i)
                      {
-@@ -447,14 +470,14 @@
+@@ -447,14 +472,14 @@
  
                          if (nbttagcompound.func_150297_b("nbt", 10))
                          {
@@ -94,7 +97,7 @@
  
                      for (int j = 0; j < nbttaglist1.func_74745_c(); ++j)
                      {
-@@ -462,12 +485,12 @@
+@@ -462,12 +487,12 @@
  
                          if (nbttagcompound1.func_150297_b("nbt", 10))
                          {

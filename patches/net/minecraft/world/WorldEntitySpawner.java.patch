@@ -1,9 +1,15 @@
 --- ../src-base/minecraft/net/minecraft/world/WorldEntitySpawner.java
 +++ ../src-work/minecraft/net/minecraft/world/WorldEntitySpawner.java
-@@ -22,6 +22,12 @@
+@@ -21,7 +21,18 @@
+ import net.minecraft.util.math.MathHelper;
  import net.minecraft.world.biome.Biome;
  import net.minecraft.world.chunk.Chunk;
++import carpet.CarpetSettings;
++import carpet.utils.SpawnReporter;
++import net.minecraft.entity.EntityList;
++import net.minecraft.util.Tuple;
  
++
 +import net.minecraft.entity.EntityList;
 +import carpet.utils.SpawnReporter;
 +import carpet.CarpetSettings;
@@ -13,7 +19,7 @@
  public final class WorldEntitySpawner
  {
      private static final int field_180268_a = (int)Math.pow(17.0D, 2.0D);
-@@ -72,19 +78,54 @@
+@@ -72,19 +83,54 @@
                  }
              }
  
@@ -70,7 +76,7 @@
                          label134:
  
                          for (ChunkPos chunkpos1 : this.field_77193_b)
-@@ -108,6 +149,8 @@
+@@ -108,6 +154,8 @@
                                      Biome.SpawnListEntry biome$spawnlistentry = null;
                                      IEntityLivingData ientitylivingdata = null;
                                      int l3 = MathHelper.func_76143_f(Math.random() * 4.0D);
@@ -79,7 +85,7 @@
  
                                      for (int i4 = 0; i4 < l3; ++i4)
                                      {
-@@ -153,7 +196,29 @@
+@@ -153,7 +201,29 @@
                                                      if (entityliving.func_70058_J())
                                                      {
                                                          ++j2;
@@ -110,7 +116,7 @@
                                                      }
                                                      else
                                                      {
-@@ -173,7 +238,30 @@
+@@ -173,7 +243,30 @@
                                  }
                              }
                          }

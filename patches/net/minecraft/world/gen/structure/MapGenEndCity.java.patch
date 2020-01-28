@@ -1,9 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/world/gen/structure/MapGenEndCity.java
 +++ ../src-work/minecraft/net/minecraft/world/gen/structure/MapGenEndCity.java
-@@ -7,11 +7,22 @@
+@@ -6,12 +6,31 @@
+ import net.minecraft.world.World;
  import net.minecraft.world.chunk.ChunkPrimer;
  import net.minecraft.world.gen.ChunkGeneratorEnd;
++import carpet.CarpetServer;
++import carpet.CarpetSettings;
++import com.google.common.collect.Lists;
++import java.util.List;
++import net.minecraft.entity.monster.EntityShulker;
++import net.minecraft.world.biome.Biome;
++import net.minecraft.world.biome.Biome.SpawnListEntry;
  
++
 +import com.google.common.collect.Lists;
 +
 +import net.minecraft.entity.monster.EntityShulker;
@@ -23,7 +32,7 @@
  
      public MapGenEndCity(ChunkGeneratorEnd p_i46665_1_)
      {
-@@ -40,7 +51,9 @@
+@@ -40,7 +59,9 @@
  
          int k = p_75047_1_ / 20;
          int l = p_75047_2_ / 20;
@@ -34,7 +43,7 @@
          k = k * 20;
          l = l * 20;
          k = k + (random.nextInt(9) + random.nextInt(9)) / 2;
-@@ -134,7 +147,26 @@
+@@ -134,7 +155,26 @@
  
              public boolean func_75069_d()
              {

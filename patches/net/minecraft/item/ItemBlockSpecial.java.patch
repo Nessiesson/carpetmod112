@@ -1,16 +1,20 @@
 --- ../src-base/minecraft/net/minecraft/item/ItemBlockSpecial.java
 +++ ../src-work/minecraft/net/minecraft/item/ItemBlockSpecial.java
-@@ -16,6 +16,9 @@
+@@ -15,7 +15,13 @@
+ import net.minecraft.util.SoundCategory;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
++import carpet.helpers.BlockRotator;
  
++
 +import carpet.CarpetSettings;
 +import carpet.helpers.BlockRotator;
 +
  public class ItemBlockSpecial extends Item
  {
      private final Block field_150935_a;
-@@ -43,10 +46,25 @@
+@@ -43,10 +49,25 @@
  
          if (!itemstack.func_190926_b() && p_180614_1_.func_175151_a(p_180614_3_, p_180614_5_, itemstack) && p_180614_2_.func_190527_a(this.field_150935_a, p_180614_3_, false, p_180614_5_, (Entity)null))
          {
@@ -37,7 +41,7 @@
                  return EnumActionResult.FAIL;
              }
              else
-@@ -66,7 +84,7 @@
+@@ -66,7 +87,7 @@
  
                  SoundType soundtype = this.field_150935_a.func_185467_w();
                  p_180614_2_.func_184133_a(p_180614_1_, p_180614_3_, soundtype.func_185841_e(), SoundCategory.BLOCKS, (soundtype.func_185843_a() + 1.0F) / 2.0F, soundtype.func_185847_b() * 0.8F);

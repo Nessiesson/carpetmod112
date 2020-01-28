@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockTallGrass.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockTallGrass.java
-@@ -22,6 +22,8 @@
+@@ -21,7 +21,11 @@
+ import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.IBlockAccess;
  import net.minecraft.world.World;
++import carpet.helpers.StatHelper;
  
++
 +import carpet.helpers.StatHelper;
 +
  public class BlockTallGrass extends BlockBush implements IGrowable
  {
      public static final PropertyEnum<BlockTallGrass.EnumType> field_176497_a = PropertyEnum.<BlockTallGrass.EnumType>func_177709_a("type", BlockTallGrass.EnumType.class);
-@@ -62,7 +64,10 @@
+@@ -62,7 +66,10 @@
      {
          if (!p_180657_1_.field_72995_K && p_180657_6_.func_77973_b() == Items.field_151097_aZ)
          {

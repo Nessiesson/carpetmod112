@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/potion/PotionEffect.java
 +++ ../src-work/minecraft/net/minecraft/potion/PotionEffect.java
-@@ -6,6 +6,8 @@
+@@ -5,7 +5,11 @@
+ import net.minecraft.nbt.NBTTagCompound;
  import org.apache.logging.log4j.LogManager;
  import org.apache.logging.log4j.Logger;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class PotionEffect implements Comparable<PotionEffect>
  {
      private static final Logger field_180155_a = LogManager.getLogger();
-@@ -16,6 +18,9 @@
+@@ -16,6 +20,9 @@
      private boolean field_82724_e;
      private boolean field_188421_h;
  
@@ -19,7 +22,7 @@
      public PotionEffect(Potion p_i46811_1_)
      {
          this(p_i46811_1_, 0, 0);
-@@ -49,28 +54,49 @@
+@@ -49,28 +56,49 @@
          this.field_188421_h = p_i1577_1_.field_188421_h;
      }
  

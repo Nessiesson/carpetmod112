@@ -1,9 +1,12 @@
 --- ../src-base/minecraft/net/minecraft/world/IBlockAccess.java
 +++ ../src-work/minecraft/net/minecraft/world/IBlockAccess.java
-@@ -6,11 +6,23 @@
+@@ -5,12 +5,26 @@
+ import net.minecraft.tileentity.TileEntity;
  import net.minecraft.util.EnumFacing;
  import net.minecraft.util.math.BlockPos;
++import carpet.carpetclient.CarpetClientChunkLogger;
  
++
 +import carpet.carpetclient.CarpetClientChunkLogger;
 +
  public interface IBlockAccess

@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockRailPowered.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockRailPowered.java
-@@ -12,6 +12,8 @@
+@@ -11,7 +11,11 @@
+ import net.minecraft.util.Rotation;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class BlockRailPowered extends BlockRailBase
  {
      public static final PropertyEnum<BlockRailBase.EnumRailDirection> field_176568_b = PropertyEnum.<BlockRailBase.EnumRailDirection>func_177708_a("shape", BlockRailBase.EnumRailDirection.class, new Predicate<BlockRailBase.EnumRailDirection>()
-@@ -32,7 +34,11 @@
+@@ -32,7 +36,11 @@
      @SuppressWarnings("incomplete-switch")
      protected boolean func_176566_a(World p_176566_1_, BlockPos p_176566_2_, IBlockState p_176566_3_, boolean p_176566_4_, int p_176566_5_)
      {
@@ -22,7 +25,7 @@
          {
              return false;
          }
-@@ -228,6 +234,14 @@
+@@ -228,6 +236,14 @@
  
                  switch ((BlockRailBase.EnumRailDirection)p_185499_1_.func_177229_b(field_176568_b))
                  {

@@ -1,9 +1,12 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockFire.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockFire.java
-@@ -20,6 +20,10 @@
+@@ -19,7 +19,13 @@
+ import net.minecraft.world.IBlockAccess;
  import net.minecraft.world.World;
  import net.minecraft.world.WorldProviderEnd;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
 + import carpet.CarpetSettings;
@@ -11,7 +14,7 @@
  public class BlockFire extends Block
  {
      public static final PropertyInteger field_176543_a = PropertyInteger.func_177719_a("age", 0, 15);
-@@ -146,9 +150,12 @@
+@@ -146,9 +152,12 @@
                      p_180650_3_ = p_180650_3_.func_177226_a(field_176543_a, Integer.valueOf(i + p_180650_4_.nextInt(3) / 2));
                      p_180650_1_.func_180501_a(p_180650_2_, p_180650_3_, 4);
                  }

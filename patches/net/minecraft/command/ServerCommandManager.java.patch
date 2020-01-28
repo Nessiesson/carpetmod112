@@ -1,9 +1,39 @@
 --- ../src-base/minecraft/net/minecraft/command/ServerCommandManager.java
 +++ ../src-work/minecraft/net/minecraft/command/ServerCommandManager.java
-@@ -33,6 +33,10 @@
+@@ -32,7 +32,40 @@
+ import net.minecraft.util.text.ITextComponent;
  import net.minecraft.util.text.TextComponentTranslation;
  import net.minecraft.util.text.TextFormatting;
++import carpet.CarpetServer;
++import carpet.commands.CommandAutosave;
++import carpet.commands.CommandBlockInfo;
++import carpet.commands.CommandCarpet;
++import carpet.commands.CommandCounter;
++import carpet.commands.CommandDistance;
++import carpet.commands.CommandEntityInfo;
++import carpet.commands.CommandFillBiome;
++import carpet.commands.CommandGMC;
++import carpet.commands.CommandGMS;
++import carpet.commands.CommandGrow;
++import carpet.commands.CommandLight;
++import carpet.commands.CommandLog;
++import carpet.commands.CommandPerimeter;
++import carpet.commands.CommandPing;
++import carpet.commands.CommandPlayer;
++import carpet.commands.CommandRNG;
++import carpet.commands.CommandRemoveEntity;
++import carpet.commands.CommandSpawn;
++import carpet.commands.CommandStructure;
++import carpet.commands.CommandTNT;
++import carpet.commands.CommandTick;
++import carpet.commands.CommandTickHealth;
++import carpet.commands.CommandTickingArea;
++import carpet.commands.CommandUnload;
++import carpet.commands.CommandUnload13;
++import carpet.commands.CommandWaypoint;
++import narcolepticfrog.rsmm.MeterCommand;
  
++
 +import carpet.commands.*;
 +import narcolepticfrog.rsmm.MeterCommand;
 +import carpet.CarpetServer;
@@ -11,7 +41,7 @@
  public class ServerCommandManager extends CommandHandler implements ICommandListener
  {
      private final MinecraftServer field_184880_a;
-@@ -89,7 +93,39 @@
+@@ -89,7 +122,40 @@
          this.func_71560_a(new CommandLocate());
          this.func_71560_a(new CommandReload());
          this.func_71560_a(new CommandFunction());
@@ -29,6 +59,7 @@
 +        this.func_71560_a(new CommandUnload13());
 +        this.func_71560_a(new CommandGMC());
 +        this.func_71560_a(new CommandGMS());
++        this.func_71560_a(new CommandGrow());
 +        this.func_71560_a(new CommandLog());
 +        this.func_71560_a(new CommandPerimeter());
 +        this.func_71560_a(new CommandRNG());

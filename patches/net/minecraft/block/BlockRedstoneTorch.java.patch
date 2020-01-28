@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockRedstoneTorch.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockRedstoneTorch.java
-@@ -19,6 +19,8 @@
+@@ -18,7 +18,11 @@
+ import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.IBlockAccess;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class BlockRedstoneTorch extends BlockTorch
  {
      private static final Map<World, List<BlockRedstoneTorch.Toggle>> field_150112_b = Maps.<World, List<BlockRedstoneTorch.Toggle>>newHashMap();
-@@ -149,7 +151,7 @@
+@@ -149,7 +153,7 @@
      {
          if (!this.func_176592_e(p_189540_2_, p_189540_3_, p_189540_1_))
          {

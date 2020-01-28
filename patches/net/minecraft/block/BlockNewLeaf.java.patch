@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockNewLeaf.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockNewLeaf.java
-@@ -17,6 +17,8 @@
+@@ -16,7 +16,11 @@
+ import net.minecraft.util.NonNullList;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.World;
++import carpet.helpers.StatHelper;
  
++
 +import carpet.helpers.StatHelper;
 +
  public class BlockNewLeaf extends BlockLeaves
  {
      public static final PropertyEnum<BlockPlanks.EnumType> field_176240_P = PropertyEnum.<BlockPlanks.EnumType>func_177708_a("variant", BlockPlanks.EnumType.class, new Predicate<BlockPlanks.EnumType>()
-@@ -98,7 +100,10 @@
+@@ -98,7 +102,10 @@
      {
          if (!p_180657_1_.field_72995_K && p_180657_6_.func_77973_b() == Items.field_151097_aZ)
          {

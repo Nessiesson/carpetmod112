@@ -1,10 +1,14 @@
 --- ../src-base/minecraft/net/minecraft/tileentity/TileEntityShulkerBox.java
 +++ ../src-work/minecraft/net/minecraft/tileentity/TileEntityShulkerBox.java
-@@ -28,7 +28,10 @@
+@@ -27,8 +27,14 @@
+ import net.minecraft.util.datafix.FixTypes;
  import net.minecraft.util.datafix.walkers.ItemStackDataLists;
  import net.minecraft.util.math.AxisAlignedBB;
++import carpet.CarpetSettings;
++import carpet.helpers.TileEntityOptimizer.ILazyTileEntity;
  
 -public class TileEntityShulkerBox extends TileEntityLockableLoot implements ITickable, ISidedInventory
++
 +import carpet.CarpetSettings;
 +import carpet.helpers.TileEntityOptimizer.ILazyTileEntity;
 +
@@ -12,7 +16,7 @@
  {
      private static final int[] field_190595_a = new int[27];
      private NonNullList<ItemStack> field_190596_f;
-@@ -54,6 +57,10 @@
+@@ -54,6 +60,10 @@
  
      public void func_73660_a()
      {
@@ -23,7 +27,7 @@
          this.func_190583_o();
  
          if (this.field_190599_i == TileEntityShulkerBox.AnimationStatus.OPENING || this.field_190599_i == TileEntityShulkerBox.AnimationStatus.CLOSING)
-@@ -69,6 +76,9 @@
+@@ -69,6 +79,9 @@
          switch (this.field_190599_i)
          {
              case CLOSED:
@@ -33,7 +37,7 @@
                  this.field_190600_j = 0.0F;
                  break;
              case OPENING:
-@@ -93,6 +103,9 @@
+@@ -93,6 +106,9 @@
  
                  break;
              case OPENED:
@@ -43,7 +47,7 @@
                  this.field_190600_j = 1.0F;
          }
      }
-@@ -202,6 +215,9 @@
+@@ -202,6 +218,9 @@
  
      public boolean func_145842_c(int p_145842_1_, int p_145842_2_)
      {
@@ -53,7 +57,7 @@
          if (p_145842_1_ == 1)
          {
              this.field_190598_h = p_145842_2_;
-@@ -409,4 +425,14 @@
+@@ -409,4 +428,14 @@
          OPENED,
          CLOSING;
      }

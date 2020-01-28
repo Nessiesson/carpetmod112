@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/world/chunk/storage/ExtendedBlockStorage.java
 +++ ../src-work/minecraft/net/minecraft/world/chunk/storage/ExtendedBlockStorage.java
-@@ -6,6 +6,8 @@
+@@ -5,7 +5,11 @@
+ import net.minecraft.init.Blocks;
  import net.minecraft.world.chunk.BlockStateContainer;
  import net.minecraft.world.chunk.NibbleArray;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class ExtendedBlockStorage
  {
      private final int field_76684_a;
-@@ -63,7 +65,12 @@
+@@ -63,7 +67,12 @@
  
      public boolean func_76663_a()
      {

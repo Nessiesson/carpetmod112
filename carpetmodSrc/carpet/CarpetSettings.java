@@ -119,6 +119,9 @@ public class CarpetSettings
     @Rule(desc = "Places players back to the original location when using camera mode by using /c then /s", category = COMMANDS)
     public static boolean cameraModeRestoreLocation;
 
+    @Rule(desc = "Enables /grow for growing things", category = COMMANDS)
+    public static boolean commandGrow = true;
+
     // ===== CREATIVE TOOLS ===== //
 
     @Rule(desc = "Sets the instant falling flag to true. The boolean used in world population that can be exploited turning true making falling blocks fall instantly.", category = CREATIVE, validator = "validateInstantFallingFlag")
@@ -149,6 +152,18 @@ public class CarpetSettings
         }
         return true;
     }
+
+    @Rule(desc = "Tall birch trees can grow from saplings in tall birch forests.", category = EXPERIMENTAL)
+    public static boolean treeTallBirchInTallBirchForest = false;
+
+    @Rule(desc = "Giant spruce trees grown from saplings generate podzol similar to 1.13+ or whatever.", category = EXPERIMENTAL)
+    public static boolean treeGiantSpruceGeneratesPodzol = false;
+
+    @Rule(desc = "Swamp trees grow in swamps from saplings grow instead of oak trees.", category = EXPERIMENTAL)
+    public static boolean treeSwampTreeInSwamp = false;
+
+    @Rule(desc = "Giant jungle branches no longer break any block.", category = EXPERIMENTAL)
+    public static boolean treeGiantJungleBedrockBreakFix = false;
 
     @Rule(desc = "Quasi Connectivity doesn't require block updates.", category = EXPERIMENTAL, extra = {
             "All redstone components will send extra block updates downwards",
@@ -267,7 +282,7 @@ public class CarpetSettings
 
     @Rule(desc = "Allows to always be able to eat cakes.", category = CREATIVE)
     public static boolean cakeAlwaysEat;
-    
+
     private static boolean validateFlyingMachineTransparent(boolean value) {
         int newOpacity = value ? 0 : 255;
         Blocks.OBSERVER.setLightOpacity(newOpacity);
@@ -807,7 +822,7 @@ public class CarpetSettings
     private static boolean validateTileTickLimit(int value) {
         return value >= -1;
     }
-    
+
     @Rule(desc = "Redstone ore blocks can redirect redstone dust", category = {EXPERIMENTAL, FEATURE})
     public static boolean redstoneOreRedirectsDust = false;
 

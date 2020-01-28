@@ -1,9 +1,25 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockSapling.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockSapling.java
-@@ -25,6 +25,10 @@
+@@ -15,16 +15,26 @@
+ import net.minecraft.util.text.translation.I18n;
+ import net.minecraft.world.IBlockAccess;
+ import net.minecraft.world.World;
++import net.minecraft.world.biome.BiomeSwamp;
+ import net.minecraft.world.gen.feature.WorldGenBigTree;
+ import net.minecraft.world.gen.feature.WorldGenBirchTree;
+ import net.minecraft.world.gen.feature.WorldGenCanopyTree;
+ import net.minecraft.world.gen.feature.WorldGenMegaJungle;
+ import net.minecraft.world.gen.feature.WorldGenMegaPineTree;
+ import net.minecraft.world.gen.feature.WorldGenSavannaTree;
++import net.minecraft.world.gen.feature.WorldGenSwamp;
+ import net.minecraft.world.gen.feature.WorldGenTaiga2;
  import net.minecraft.world.gen.feature.WorldGenTrees;
  import net.minecraft.world.gen.feature.WorldGenerator;
++import carpet.CarpetSettings;
++import carpet.helpers.BlockSaplingHelper;
++import net.minecraft.init.Biomes;
  
++
 +import carpet.CarpetSettings;
 +import net.minecraft.init.Biomes;
 +import carpet.helpers.BlockSaplingHelper;
@@ -11,7 +27,7 @@
  public class BlockSapling extends BlockBush implements IGrowable
  {
      public static final PropertyEnum<BlockPlanks.EnumType> field_176480_a = PropertyEnum.<BlockPlanks.EnumType>func_177709_a("type", BlockPlanks.EnumType.class);
-@@ -68,6 +72,12 @@
+@@ -68,6 +78,12 @@
          }
          else
          {
@@ -24,3 +40,14 @@
              this.func_176476_e(p_176478_1_, p_176478_2_, p_176478_3_, p_176478_4_);
          }
      }
+@@ -159,6 +175,10 @@
+                 }
+ 
+             case OAK:
++                if (p_176476_1_.func_180494_b(p_176476_2_) instanceof BiomeSwamp) {
++                    worldgenerator = new WorldGenSwamp();
++                    break;
++                }
+         }
+ 
+         IBlockState iblockstate2 = Blocks.field_150350_a.func_176223_P();

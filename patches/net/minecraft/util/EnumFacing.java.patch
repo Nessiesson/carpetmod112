@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/util/EnumFacing.java
 +++ ../src-work/minecraft/net/minecraft/util/EnumFacing.java
-@@ -13,6 +13,8 @@
+@@ -12,7 +12,11 @@
+ import net.minecraft.util.math.BlockPos;
  import net.minecraft.util.math.MathHelper;
  import net.minecraft.util.math.Vec3i;
++import carpet.helpers.BlockRotator;
  
++
 +import carpet.helpers.BlockRotator;
 +
  public enum EnumFacing implements IStringSerializable
  {
      DOWN(0, 1, -1, "down", EnumFacing.AxisDirection.NEGATIVE, EnumFacing.Axis.Y, new Vec3i(0, -1, 0)),
-@@ -28,9 +30,9 @@
+@@ -28,9 +32,9 @@
      private final String field_176757_j;
      private final EnumFacing.Axis field_176758_k;
      private final EnumFacing.AxisDirection field_176755_l;
@@ -22,7 +25,7 @@
      private static final Map<String, EnumFacing> field_176761_p = Maps.<String, EnumFacing>newHashMap();
  
      private EnumFacing(int p_i46016_3_, int p_i46016_4_, int p_i46016_5_, String p_i46016_6_, EnumFacing.AxisDirection p_i46016_7_, EnumFacing.Axis p_i46016_8_, Vec3i p_i46016_9_)
-@@ -179,11 +181,15 @@
+@@ -179,11 +183,15 @@
  
              if (d0 - (double)p_190914_0_.func_177956_o() > 2.0D)
              {
@@ -38,7 +41,7 @@
                  return DOWN;
              }
          }
-@@ -289,6 +295,94 @@
+@@ -289,6 +297,94 @@
          }
      }
  

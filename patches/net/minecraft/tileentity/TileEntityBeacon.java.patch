@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/tileentity/TileEntityBeacon.java
 +++ ../src-work/minecraft/net/minecraft/tileentity/TileEntityBeacon.java
-@@ -32,6 +32,8 @@
+@@ -31,7 +31,11 @@
+ import net.minecraft.util.ITickable;
  import net.minecraft.util.math.AxisAlignedBB;
  import net.minecraft.util.math.BlockPos;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class TileEntityBeacon extends TileEntityLockable implements ITickable, ISidedInventory
  {
      public static final Potion[][] field_146009_a = new Potion[][] {{MobEffects.field_76424_c, MobEffects.field_76422_e}, {MobEffects.field_76429_m, MobEffects.field_76430_j}, {MobEffects.field_76420_g}, {MobEffects.field_76428_l}};
-@@ -111,49 +113,54 @@
+@@ -111,49 +115,54 @@
          boolean flag = true;
          BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
  

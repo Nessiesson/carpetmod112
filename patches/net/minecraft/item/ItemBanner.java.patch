@@ -1,15 +1,44 @@
 --- ../src-base/minecraft/net/minecraft/item/ItemBanner.java
 +++ ../src-work/minecraft/net/minecraft/item/ItemBanner.java
-@@ -1,6 +1,8 @@
+@@ -1,6 +1,7 @@
  package net.minecraft.item;
  
  import javax.annotation.Nullable;
-+
 +import carpet.CarpetSettings;
  import net.minecraft.advancements.CriteriaTriggers;
  import net.minecraft.block.BlockStandingSign;
  import net.minecraft.block.BlockWallSign;
-@@ -51,6 +53,7 @@
+@@ -22,6 +23,29 @@
+ import net.minecraft.util.text.translation.I18n;
+ import net.minecraft.world.World;
+ 
++
++import carpet.CarpetSettings;
++import net.minecraft.advancements.CriteriaTriggers;
++import net.minecraft.block.BlockStandingSign;
++import net.minecraft.block.BlockWallSign;
++import net.minecraft.block.state.IBlockState;
++import net.minecraft.creativetab.CreativeTabs;
++import net.minecraft.entity.player.EntityPlayer;
++import net.minecraft.entity.player.EntityPlayerMP;
++import net.minecraft.init.Blocks;
++import net.minecraft.init.Items;
++import net.minecraft.nbt.NBTTagList;
++import net.minecraft.tileentity.TileEntity;
++import net.minecraft.tileentity.TileEntityBanner;
++import net.minecraft.util.EnumActionResult;
++import net.minecraft.util.EnumFacing;
++import net.minecraft.util.EnumHand;
++import net.minecraft.util.NonNullList;
++import net.minecraft.util.math.BlockPos;
++import net.minecraft.util.math.MathHelper;
++import net.minecraft.util.text.translation.I18n;
++import net.minecraft.world.World;
++
+ public class ItemBanner extends ItemBlock
+ {
+     public ItemBanner()
+@@ -51,6 +75,7 @@
                  }
                  else
                  {
@@ -17,7 +46,7 @@
                      p_180614_3_ = flag ? p_180614_3_.func_177977_b() : p_180614_3_;
  
                      if (p_180614_5_ == EnumFacing.UP)
-@@ -75,7 +78,7 @@
+@@ -75,7 +100,7 @@
                          CriteriaTriggers.field_193137_x.func_193173_a((EntityPlayerMP)p_180614_1_, p_180614_3_, itemstack);
                      }
  

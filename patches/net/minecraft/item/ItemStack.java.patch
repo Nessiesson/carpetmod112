@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/item/ItemStack.java
 +++ ../src-work/minecraft/net/minecraft/item/ItemStack.java
-@@ -41,6 +41,8 @@
+@@ -40,7 +40,11 @@
+ import net.minecraft.util.text.event.HoverEvent;
  import net.minecraft.util.text.translation.I18n;
  import net.minecraft.world.World;
++import carpet.helpers.StatHelper;
  
++
 +import carpet.helpers.StatHelper;
 +
  public final class ItemStack
  {
      public static final ItemStack field_190927_a = new ItemStack((Item)null);
-@@ -169,7 +171,8 @@
+@@ -169,7 +173,8 @@
  
          if (enumactionresult == EnumActionResult.SUCCESS)
          {
@@ -19,7 +22,7 @@
          }
  
          return enumactionresult;
-@@ -334,7 +337,8 @@
+@@ -334,7 +339,8 @@
  
          if (flag)
          {
@@ -29,7 +32,7 @@
          }
      }
  
-@@ -344,7 +348,8 @@
+@@ -344,7 +350,8 @@
  
          if (flag)
          {
@@ -39,7 +42,7 @@
          }
      }
  
-@@ -496,7 +501,8 @@
+@@ -496,7 +503,8 @@
  
      public void func_77980_a(World p_77980_1_, EntityPlayer p_77980_2_, int p_77980_3_)
      {
@@ -49,7 +52,7 @@
          this.func_77973_b().func_77622_d(this, p_77980_1_, p_77980_2_);
      }
  
-@@ -881,4 +887,10 @@
+@@ -881,4 +889,10 @@
      {
          this.func_190917_f(-p_190918_1_);
      }

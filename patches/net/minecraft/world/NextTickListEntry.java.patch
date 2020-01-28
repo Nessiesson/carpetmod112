@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/world/NextTickListEntry.java
 +++ ../src-work/minecraft/net/minecraft/world/NextTickListEntry.java
-@@ -3,6 +3,8 @@
+@@ -2,7 +2,11 @@
+ 
  import net.minecraft.block.Block;
  import net.minecraft.util.math.BlockPos;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class NextTickListEntry implements Comparable<NextTickListEntry>
  {
      private static long field_77177_f;
-@@ -50,6 +52,8 @@
+@@ -50,6 +54,8 @@
  
      public int compareTo(NextTickListEntry p_compareTo_1_)
      {

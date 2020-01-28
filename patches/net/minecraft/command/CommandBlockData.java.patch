@@ -1,16 +1,20 @@
 --- ../src-base/minecraft/net/minecraft/command/CommandBlockData.java
 +++ ../src-work/minecraft/net/minecraft/command/CommandBlockData.java
-@@ -12,6 +12,9 @@
+@@ -11,7 +11,13 @@
+ import net.minecraft.tileentity.TileEntity;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.World;
++import carpet.worldedit.WorldEditBridge;
++import net.minecraft.entity.player.EntityPlayerMP;
  
++
 +import carpet.worldedit.WorldEditBridge;
 +import net.minecraft.entity.player.EntityPlayerMP;
 +
  public class CommandBlockData extends CommandBase
  {
      public String func_71517_b()
-@@ -80,6 +83,9 @@
+@@ -80,6 +86,9 @@
                      }
                      else
                      {

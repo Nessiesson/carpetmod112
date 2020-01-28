@@ -1,9 +1,16 @@
 --- ../src-base/minecraft/net/minecraft/command/CommandFill.java
 +++ ../src-work/minecraft/net/minecraft/command/CommandFill.java
-@@ -16,6 +16,12 @@
+@@ -15,7 +15,19 @@
+ import net.minecraft.tileentity.TileEntity;
  import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
++import carpet.helpers.CapturedDrops;
++import carpet.worldedit.WorldEditBridge;
++import net.minecraft.entity.item.EntityItem;
++import net.minecraft.entity.player.EntityPlayerMP;
  
++
 +import carpet.CarpetSettings;
 +import carpet.helpers.CapturedDrops;
 +import carpet.worldedit.WorldEditBridge;
@@ -13,7 +20,7 @@
  public class CommandFill extends CommandBase
  {
      public String func_71517_b()
-@@ -60,9 +66,9 @@
+@@ -60,9 +72,9 @@
              BlockPos blockpos3 = new BlockPos(Math.max(blockpos.func_177958_n(), blockpos1.func_177958_n()), Math.max(blockpos.func_177956_o(), blockpos1.func_177956_o()), Math.max(blockpos.func_177952_p(), blockpos1.func_177952_p()));
              int i = (blockpos3.func_177958_n() - blockpos2.func_177958_n() + 1) * (blockpos3.func_177956_o() - blockpos2.func_177956_o() + 1) * (blockpos3.func_177952_p() - blockpos2.func_177952_p() + 1);
  
@@ -25,7 +32,7 @@
              }
              else if (blockpos2.func_177956_o() >= 0 && blockpos3.func_177956_o() < 256)
              {
-@@ -96,6 +102,9 @@
+@@ -96,6 +108,9 @@
                          throw new CommandException("commands.fill.tagError", new Object[] {nbtexception.getMessage()});
                      }
                  }
@@ -35,7 +42,7 @@
  
                  List<BlockPos> list = Lists.<BlockPos>newArrayList();
                  i = 0;
-@@ -114,7 +123,13 @@
+@@ -114,7 +129,13 @@
                                  {
                                      if ("destroy".equals(p_184881_3_[8]))
                                      {
@@ -49,7 +56,7 @@
                                      }
                                      else if ("keep".equals(p_184881_3_[8]))
                                      {
-@@ -137,6 +152,7 @@
+@@ -137,6 +158,7 @@
                                  {
                                      if ("hollow".equals(p_184881_3_[8]))
                                      {
@@ -57,7 +64,7 @@
                                          world.func_180501_a(blockpos4, Blocks.field_150350_a.func_176223_P(), 2);
                                          list.add(blockpos4);
                                      }
-@@ -145,6 +161,7 @@
+@@ -145,6 +167,7 @@
                                  }
                              }
  
@@ -65,7 +72,7 @@
                              TileEntity tileentity1 = world.func_175625_s(blockpos4);
  
                              if (tileentity1 != null && tileentity1 instanceof IInventory)
-@@ -152,7 +169,7 @@
+@@ -152,7 +175,7 @@
                                  ((IInventory)tileentity1).func_174888_l();
                              }
  
@@ -74,7 +81,7 @@
                              {
                                  list.add(blockpos4);
                                  ++i;
-@@ -173,12 +190,17 @@
+@@ -173,12 +196,17 @@
                          }
                      }
                  }

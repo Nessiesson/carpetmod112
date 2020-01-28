@@ -1,15 +1,40 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockFarmland.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockFarmland.java
-@@ -1,6 +1,8 @@
+@@ -1,6 +1,7 @@
  package net.minecraft.block;
  
  import java.util.Random;
-+
 +import carpet.CarpetSettings;
  import net.minecraft.block.material.Material;
  import net.minecraft.block.properties.IProperty;
  import net.minecraft.block.properties.PropertyInteger;
-@@ -86,7 +88,11 @@
+@@ -18,6 +19,25 @@
+ import net.minecraft.world.IBlockAccess;
+ import net.minecraft.world.World;
+ 
++
++import carpet.CarpetSettings;
++import net.minecraft.block.material.Material;
++import net.minecraft.block.properties.IProperty;
++import net.minecraft.block.properties.PropertyInteger;
++import net.minecraft.block.state.BlockFaceShape;
++import net.minecraft.block.state.BlockStateContainer;
++import net.minecraft.block.state.IBlockState;
++import net.minecraft.entity.Entity;
++import net.minecraft.entity.EntityLivingBase;
++import net.minecraft.entity.player.EntityPlayer;
++import net.minecraft.init.Blocks;
++import net.minecraft.item.Item;
++import net.minecraft.util.EnumFacing;
++import net.minecraft.util.math.AxisAlignedBB;
++import net.minecraft.util.math.BlockPos;
++import net.minecraft.world.IBlockAccess;
++import net.minecraft.world.World;
++
+ public class BlockFarmland extends Block
+ {
+     public static final PropertyInteger field_176531_a = PropertyInteger.func_177719_a("moisture", 0, 7);
+@@ -86,7 +106,11 @@
          for (Entity entity : p_190970_0_.func_72839_b((Entity)null, axisalignedbb))
          {
              double d0 = Math.min(axisalignedbb.field_72337_e - axisalignedbb.field_72338_b, axisalignedbb.field_72337_e - entity.func_174813_aQ().field_72338_b);

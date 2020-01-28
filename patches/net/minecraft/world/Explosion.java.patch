@@ -1,9 +1,13 @@
 --- ../src-base/minecraft/net/minecraft/world/Explosion.java
 +++ ../src-work/minecraft/net/minecraft/world/Explosion.java
-@@ -26,20 +26,26 @@
+@@ -25,21 +25,30 @@
+ import net.minecraft.util.math.BlockPos;
  import net.minecraft.util.math.MathHelper;
  import net.minecraft.util.math.Vec3d;
++import carpet.CarpetSettings;
++import carpet.helpers.OptimizedExplosion;
  
++
 +import carpet.CarpetSettings;
 +import carpet.helpers.OptimizedExplosion;
 +
@@ -38,7 +42,7 @@
      public Explosion(World p_i45754_1_, Entity p_i45754_2_, double p_i45754_3_, double p_i45754_5_, double p_i45754_7_, float p_i45754_9_, boolean p_i45754_10_, boolean p_i45754_11_)
      {
          this.field_77287_j = p_i45754_1_;
-@@ -54,6 +60,16 @@
+@@ -54,6 +63,16 @@
  
      public void func_77278_a()
      {
@@ -55,7 +59,7 @@
          Set<BlockPos> set = Sets.<BlockPos>newHashSet();
          int i = 16;
  
-@@ -102,7 +118,7 @@
+@@ -102,7 +121,7 @@
              }
          }
  
@@ -64,7 +68,7 @@
          float f3 = this.field_77280_f * 2.0F;
          int k1 = MathHelper.func_76128_c(this.field_77284_b - (double)f3 - 1.0D);
          int l1 = MathHelper.func_76128_c(this.field_77284_b + (double)f3 + 1.0D);
-@@ -164,6 +180,14 @@
+@@ -164,6 +183,14 @@
  
      public void func_77279_a(boolean p_77279_1_)
      {

@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/tileentity/TileEntitySkull.java
 +++ ../src-work/minecraft/net/minecraft/tileentity/TileEntitySkull.java
-@@ -17,6 +17,8 @@
+@@ -16,7 +16,11 @@
+ import net.minecraft.util.Mirror;
  import net.minecraft.util.Rotation;
  import net.minecraft.util.StringUtils;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class TileEntitySkull extends TileEntity implements ITickable
  {
      private int field_145908_a;
-@@ -80,7 +82,8 @@
+@@ -80,7 +84,8 @@
  
      public void func_73660_a()
      {

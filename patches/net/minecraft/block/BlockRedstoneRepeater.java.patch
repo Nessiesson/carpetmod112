@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockRedstoneRepeater.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockRedstoneRepeater.java
-@@ -20,6 +20,8 @@
+@@ -19,7 +19,11 @@
+ import net.minecraft.util.text.translation.I18n;
  import net.minecraft.world.IBlockAccess;
  import net.minecraft.world.World;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
  public class BlockRedstoneRepeater extends BlockRedstoneDiode
  {
      public static final PropertyBool field_176411_a = PropertyBool.func_177716_a("locked");
-@@ -64,9 +66,20 @@
+@@ -64,9 +68,20 @@
          }
      }
  

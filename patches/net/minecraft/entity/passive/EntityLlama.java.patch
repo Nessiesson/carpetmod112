@@ -1,9 +1,12 @@
 --- ../src-base/minecraft/net/minecraft/entity/passive/EntityLlama.java
 +++ ../src-work/minecraft/net/minecraft/entity/passive/EntityLlama.java
-@@ -47,6 +47,10 @@
+@@ -46,7 +46,13 @@
+ import net.minecraft.world.DifficultyInstance;
  import net.minecraft.world.World;
  import net.minecraft.world.storage.loot.LootTableList;
++import carpet.CarpetSettings;
  
++
 +import carpet.CarpetSettings;
 +
 + import carpet.CarpetSettings;
@@ -11,7 +14,7 @@
  public class EntityLlama extends AbstractChestHorse implements IRangedAttackMob
  {
      private static final DataParameter<Integer> field_190720_bG = EntityDataManager.<Integer>func_187226_a(EntityLlama.class, DataSerializers.field_187192_b);
-@@ -192,7 +196,7 @@
+@@ -192,7 +198,7 @@
              j = 6;
              f = 10.0F;
  
@@ -20,7 +23,7 @@
              {
                  flag = true;
                  this.func_146082_f(p_190678_1_);
-@@ -492,6 +496,19 @@
+@@ -492,6 +498,19 @@
          }
      }
  

@@ -1,15 +1,18 @@
 --- ../src-base/minecraft/net/minecraft/block/BlockDeadBush.java
 +++ ../src-work/minecraft/net/minecraft/block/BlockDeadBush.java
-@@ -17,6 +17,8 @@
+@@ -16,7 +16,11 @@
+ import net.minecraft.util.math.BlockPos;
  import net.minecraft.world.IBlockAccess;
  import net.minecraft.world.World;
++import carpet.helpers.StatHelper;
  
++
 +import carpet.helpers.StatHelper;
 +
  public class BlockDeadBush extends BlockBush
  {
      protected static final AxisAlignedBB field_185516_a = new AxisAlignedBB(0.09999999403953552D, 0.0D, 0.09999999403953552D, 0.8999999761581421D, 0.800000011920929D, 0.8999999761581421D);
-@@ -60,7 +62,10 @@
+@@ -60,7 +64,10 @@
      {
          if (!p_180657_1_.field_72995_K && p_180657_6_.func_77973_b() == Items.field_151097_aZ)
          {

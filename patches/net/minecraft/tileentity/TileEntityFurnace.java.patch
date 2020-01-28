@@ -1,10 +1,14 @@
 --- ../src-base/minecraft/net/minecraft/tileentity/TileEntityFurnace.java
 +++ ../src-work/minecraft/net/minecraft/tileentity/TileEntityFurnace.java
-@@ -29,7 +29,10 @@
+@@ -28,8 +28,14 @@
+ import net.minecraft.util.datafix.FixTypes;
  import net.minecraft.util.datafix.walkers.ItemStackDataLists;
  import net.minecraft.util.math.MathHelper;
++import carpet.CarpetSettings;
++import carpet.helpers.TileEntityOptimizer.ILazyTileEntity;
  
 -public class TileEntityFurnace extends TileEntityLockable implements ITickable, ISidedInventory
++
 +import carpet.CarpetSettings;
 +import carpet.helpers.TileEntityOptimizer.ILazyTileEntity;
 +
@@ -12,7 +16,7 @@
  {
      private static final int[] field_145962_k = new int[] {0};
      private static final int[] field_145959_l = new int[] {2, 1};
-@@ -41,6 +44,9 @@
+@@ -41,6 +47,9 @@
      private int field_174905_l;
      private String field_145958_o;
  
@@ -22,7 +26,7 @@
      public int func_70302_i_()
      {
          return this.field_145957_n.size();
-@@ -157,6 +163,10 @@
+@@ -157,6 +166,10 @@
  
      public void func_73660_a()
      {
@@ -33,7 +37,7 @@
          boolean flag = this.func_145950_i();
          boolean flag1 = false;
  
-@@ -221,6 +231,10 @@
+@@ -221,6 +234,10 @@
                  flag1 = true;
                  BlockFurnace.func_176446_a(this.func_145950_i(), this.field_145850_b, this.field_174879_c);
              }
@@ -44,7 +48,7 @@
          }
  
          if (flag1)
-@@ -521,4 +535,14 @@
+@@ -521,4 +538,14 @@
      {
          this.field_145957_n.clear();
      }

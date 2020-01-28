@@ -1,16 +1,20 @@
 --- ../src-base/minecraft/net/minecraft/entity/projectile/EntityThrowable.java
 +++ ../src-work/minecraft/net/minecraft/entity/projectile/EntityThrowable.java
-@@ -21,6 +21,9 @@
+@@ -20,7 +20,13 @@
+ import net.minecraft.util.math.Vec3d;
  import net.minecraft.world.World;
  import net.minecraft.world.WorldServer;
++import carpet.logging.LoggerRegistry;
++import carpet.logging.logHelpers.TrajectoryLogHelper;
  
++
 +import carpet.logging.logHelpers.TrajectoryLogHelper;
 +import carpet.logging.LoggerRegistry;
 +
  public abstract class EntityThrowable extends Entity implements IProjectile
  {
      private int field_145788_c;
-@@ -36,6 +39,8 @@
+@@ -36,6 +42,8 @@
      public Entity field_184539_c;
      private int field_184540_av;
  
@@ -19,7 +23,7 @@
      public EntityThrowable(World p_i1776_1_)
      {
          super(p_i1776_1_);
-@@ -43,6 +48,11 @@
+@@ -43,6 +51,11 @@
          this.field_145786_d = -1;
          this.field_145787_e = -1;
          this.func_70105_a(0.25F, 0.25F);
@@ -31,7 +35,7 @@
      }
  
      public EntityThrowable(World p_i1778_1_, double p_i1778_2_, double p_i1778_4_, double p_i1778_6_)
-@@ -268,9 +278,24 @@
+@@ -268,9 +281,24 @@
              this.field_70181_x -= (double)f2;
          }
  

@@ -1,10 +1,14 @@
 --- ../src-base/minecraft/net/minecraft/tileentity/TileEntityChest.java
 +++ ../src-work/minecraft/net/minecraft/tileentity/TileEntityChest.java
-@@ -23,7 +23,10 @@
+@@ -22,8 +22,14 @@
+ import net.minecraft.util.datafix.walkers.ItemStackDataLists;
  import net.minecraft.util.math.AxisAlignedBB;
  import net.minecraft.util.math.BlockPos;
++import carpet.CarpetSettings;
++import carpet.helpers.TileEntityOptimizer.ILazyTileEntity;
  
 -public class TileEntityChest extends TileEntityLockableLoot implements ITickable
++
 +import carpet.CarpetSettings;
 +import carpet.helpers.TileEntityOptimizer.ILazyTileEntity;
 +
@@ -12,7 +16,7 @@
  {
      private NonNullList<ItemStack> field_145985_p = NonNullList.<ItemStack>func_191197_a(27, ItemStack.field_190927_a);
      public boolean field_145984_a;
-@@ -46,6 +49,10 @@
+@@ -46,6 +52,10 @@
          this.field_145982_r = p_i46677_1_;
      }
  
@@ -23,7 +27,7 @@
      public int func_70302_i_()
      {
          return 27;
-@@ -203,13 +210,17 @@
+@@ -203,13 +213,17 @@
          }
          else
          {
@@ -42,7 +46,7 @@
          this.func_145979_i();
          int i = this.field_174879_c.func_177958_n();
          int j = this.field_174879_c.func_177956_o();
-@@ -235,6 +246,10 @@
+@@ -235,6 +249,10 @@
              }
          }
  
@@ -53,7 +57,7 @@
          this.field_145986_n = this.field_145989_m;
          float f1 = 0.1F;
  
-@@ -258,6 +273,10 @@
+@@ -258,6 +276,10 @@
  
          if (this.field_145987_o == 0 && this.field_145989_m > 0.0F || this.field_145987_o > 0 && this.field_145989_m < 1.0F)
          {
@@ -64,7 +68,7 @@
              float f2 = this.field_145989_m;
  
              if (this.field_145987_o > 0)
-@@ -303,6 +322,9 @@
+@@ -303,6 +325,9 @@
  
      public boolean func_145842_c(int p_145842_1_, int p_145842_2_)
      {
@@ -74,7 +78,7 @@
          if (p_145842_1_ == 1)
          {
              this.field_145987_o = p_145842_2_;
-@@ -386,4 +408,14 @@
+@@ -386,4 +411,14 @@
      {
          return this.field_145985_p;
      }
