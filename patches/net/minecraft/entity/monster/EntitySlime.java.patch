@@ -37,3 +37,12 @@
      protected SoundEvent func_184601_bQ(DamageSource p_184601_1_)
      {
          return this.func_189101_db() ? SoundEvents.field_187898_fy : SoundEvents.field_187880_fp;
+@@ -304,7 +317,7 @@
+         BlockPos blockpos = new BlockPos(MathHelper.func_76128_c(this.field_70165_t), 0, MathHelper.func_76128_c(this.field_70161_v));
+         Chunk chunk = this.field_70170_p.func_175726_f(blockpos);
+ 
+-        if (this.field_70170_p.func_72912_H().func_76067_t() == WorldType.field_77138_c && this.field_70146_Z.nextInt(4) != 1)
++        if (false && this.field_70146_Z.nextInt(4) != 1)
+         {
+             return false;
+         }

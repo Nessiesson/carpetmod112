@@ -1,0 +1,11 @@
+--- ../src-base/minecraft/net/minecraft/entity/passive/EntitySquid.java
++++ ../src-work/minecraft/net/minecraft/entity/passive/EntitySquid.java
+@@ -189,7 +189,7 @@
+ 
+     public boolean func_70601_bi()
+     {
+-        return this.field_70163_u > 45.0D && this.field_70163_u < (double)this.field_70170_p.func_181545_F() && super.func_70601_bi();
++        return this.field_70163_u > 45.0D && this.field_70163_u < 63D && super.func_70601_bi();
+     }
+ 
+     public void func_175568_b(float p_175568_1_, float p_175568_2_, float p_175568_3_)
